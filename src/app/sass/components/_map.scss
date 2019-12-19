@@ -1,0 +1,27 @@
+agm-map{
+    height: 65vh;
+
+    @include respond(tab-land){
+        height: 75vh;
+    }
+
+    @include respond(tab-land){
+        height: 72vh;
+    }
+
+    @include respond(phone){
+        height: 100vh;
+    }
+}
+
+.map-container{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 5vh;
+
+    @include respond(phone){
+        width: 100%;
+        padding-top: 0;
+    }
+
+}

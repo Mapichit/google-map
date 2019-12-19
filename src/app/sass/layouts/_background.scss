@@ -1,0 +1,13 @@
+.background {
+    background-image: linear-gradient(
+        
+    to top,
+    rgba($color-black,0.2),
+    rgba($color-black,0.2)),
+
+    url(app/img/background.jpg);
+
+    
+    height: 100vh;
+    background-size: cover;
+}

@@ -17,6 +17,9 @@ export class AppComponent {
 
   mapClickToggle = false;
 
+  toggleMarker = "On";
+
+
 
   constructor(private http: HttpClient, private postCoords: PostCoords) { }
 
@@ -52,6 +55,11 @@ export class AppComponent {
 
   toggleMapClick(){
       this.mapClickToggle = !this.mapClickToggle;
+      if (this.mapClickToggle === false){
+        this.toggleMarker = "On";
+      } else {
+        this.toggleMarker ="Off";
+      }
      
   }
 

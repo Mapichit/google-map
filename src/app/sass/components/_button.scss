@@ -1,0 +1,91 @@
+.btn{
+    font-size: 1.5rem;
+    color: $color-white;
+    display: inline-block;
+    text-decoration: none;
+    padding: 1.7rem;
+    border: $color-white solid 1px;
+    background-color: transparent;
+    margin: 5rem 16rem auto 16rem;
+    width: 20rem;
+    font-family: 'Raleway', sans-serif;
+
+    transition: all .2s;
+
+    @include respond(tab-land){
+        margin: 5rem 10rem;
+    }
+
+    @include respond(tab-port){
+        margin: 4rem 5rem;
+    }
+
+    @include respond(phone){
+        font-size: 1rem;
+        width: 11rem;
+        padding: 1rem;
+
+    }
+
+    @include respond(Galaxy-S5){
+        font-size: 0.8rem;
+    }
+
+    &__toggleMarker{
+        @include respond(phone){
+        
+            
+            position: absolute;
+            transform: translateX(-60%);
+            background-color: $color-black;
+        }
+    }
+
+    &__deleteAll{
+        @include respond(phone){
+    
+            postion: absolute;
+            transform: translateX(60%);
+            background-color: $color-black;
+            width: 8rem;
+        }
+    }
+
+    &__group{
+        @include respond(phone){
+            margin-top: -12rem;
+        }
+
+        @include respond(Galaxy-S5){
+            transform: translateX(-2rem);
+        }
+    }
+
+    
+
+    &:hover{
+        @include respond(min-phone){
+        background-color: rgba($color-black,0.8);
+        transform: scale(1.05);
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
+        transform: translateY(-2px);
+        }
+    }
+
+    &:active{
+        @include respond(min-phone){
+            box-shadow: 0 0.5rem 1rem rgba($color-black, .15);
+            transform: translateY(0px);      
+        }
+       
+    }
+
+    &__window{
+        margin-top: 1rem;
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.2rem;
+        padding: 2px 5px;
+    }
+
+}
+

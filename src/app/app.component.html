@@ -1,27 +1,26 @@
-<div class="map-container">
+<div class="background">
+
+  <div class="header">
+    <h2>Google Map Api Marker</h2>
+  </div>
+
+  <div class="map-container">
+    <agm-map [zoom]="15" [latitude]="latlngIni[0].lat" [longitude]="latlngIni[0].lng" (mapClick)="onChooseLocation($event)">
+      <agm-marker *ngFor="let coordinates of latlng" [latitude]="coordinates.lat" [longitude]="coordinates.lng"> 
+        <agm-info-window>
+          <app-window (deleteId)="receivedDeleteId($event)" [keyId]="coordinates.id" [latitude]="coordinates.lat" [longitude]="coordinates.lng"></app-window>
+        </agm-info-window>
+      </agm-marker>
+    </agm-map>
+  </div>  
+
+  <div class="text-align-center">
+    <div class="btn__group">
+      <button class="btn btn__toggleMarker" (click)="toggleMapClick()">Toggle Add Marker {{toggleMarker}}</button>
+      <button class="btn btn__deleteAll" (click)="deletePosts()">Delete All</button>
+    </div>
+  </div>
 
 
-<agm-map [zoom]="15" [latitude]="latlngIni[0].lat" [longitude]="latlngIni[0].lng" (mapClick)="onChooseLocation($event)">
 
-  <agm-marker *ngFor="let coordinates of latlng" [latitude]="coordinates.lat" [longitude]="coordinates.lng"> 
-    <agm-info-window>
-      <app-window (deleteId)="receivedDeleteId($event)" [keyId]="coordinates.id" [latitude]="coordinates.lat" [longitude]="coordinates.lng"></app-window>
-    </agm-info-window>
-  </agm-marker>
- 
-  
-  
-</agm-map>
-
-<div class="float-right">
-
-<button *ngIf="mapClickToggle; else buttonOff" class="btn btn-primary mt-3 mr-3" (click)="toggleMapClick()">Toggle Add Marker Off</button>
-<ng-template #buttonOff>
-    <button class="btn btn-primary mt-3 mr-3" (click)="toggleMapClick()">Toggle Add Marker On</button>
-  </ng-template>
-
-<button class="btn btn-danger mt-3" (click)="deletePosts()">Delete All</button>
 </div>
-
-</div>  
-
