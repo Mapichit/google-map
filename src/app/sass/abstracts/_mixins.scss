@@ -9,7 +9,11 @@
     }
 
     @if $breakpoint == min-phone{
-        @media (min-width: 37.5em) {@content};
+        @media (min-width: 37.5em) {@content}; 
+    }
+
+    @if $breakpoint == tab-port-2{
+        @media (max-width: 42.5em) {@content}; //680px
     }
 
     @if $breakpoint == tab-port{

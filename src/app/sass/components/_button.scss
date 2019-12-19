@@ -6,18 +6,22 @@
     padding: 1.7rem;
     border: $color-white solid 1px;
     background-color: transparent;
-    margin: 5rem 16rem auto 16rem;
+    margin: 5vh 16rem auto 16rem;
     width: 20rem;
     font-family: 'Raleway', sans-serif;
 
     transition: all .2s;
 
     @include respond(tab-land){
-        margin: 5rem 10rem;
+        margin: 5rem 10rem auto 10rem;
     }
 
     @include respond(tab-port){
         margin: 4rem 5rem;
+    }
+
+    @include respond(tab-port-2){
+        margin: 2vh 2vw;
     }
 
     @include respond(phone){
@@ -52,6 +56,7 @@
     }
 
     &__group{
+
         @include respond(phone){
             margin-top: -12rem;
         }
